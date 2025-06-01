@@ -43,3 +43,43 @@ This project uses the **Five Crop Diseases Dataset** from Kaggle:
 2. Install the required dependencies:
    ```bash
    pip install -r requirements.txt
+   ```
+3. Start the Web UI:
+   > **Important:** Do NOT use `python3 webui.py` to run this program.  
+   > You must use the following command to launch the Streamlit server:
+   ```bash
+   streamlit run webui.py
+   ```
+
+### 4️⃣ Notes for Colab Users
+
+If you use **Colab + LocalTunnel** to host the Web UI, it will prompt for a **Tunnel Password**.  
+This password is your **public IP**. You can find your IP by running the following in a Colab cell:
+```python
+!curl -s https://api.ipify.org
+```
+Copy the returned IP and paste it when prompted by LocalTunnel.
+
+---
+
+## 📌 Notes
+
+- `datasets/` and `best.pt` are **not included** in this repository due to size limits. You must generate them by running the training notebook.
+- The model will classify images into: **Brown_Rust**, **Healthy**, and **Yellow_Rust**.
+- The Web UI (`webui.py`) allows you to upload images and get predictions.
+- For best results, it is recommended to use the Wheat data as it has more balanced class distributions.
+
+---
+
+## 📋 Requirements
+
+- Python 3.10+
+- ultralytics
+- streamlit
+- pillow
+
+---
+
+## 🖋 Author
+
+This project is developed by **YourName**.
